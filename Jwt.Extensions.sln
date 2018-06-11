@@ -9,7 +9,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Jwt.Extensions", "src\Jwt.E
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{DB02D074-9EED-49CA-A874-2C8FA4629CF8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Jwt.Extensions.Tests", "test\Jwt.Extensions.Tests\Jwt.Extensions.Tests.csproj", "{8F2245C3-CE28-49CD-A040-98BE5962C7F4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Jwt.Extensions.Tests", "test\Jwt.Extensions.Tests\Jwt.Extensions.Tests.csproj", "{8F2245C3-CE28-49CD-A040-98BE5962C7F4}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "demo", "demo", "{3D61F254-6C39-41E6-9E28-89B089537AB4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Web", "demo\Web\Web.csproj", "{749CFDC3-275A-405F-A39A-EC54D2A88809}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -25,6 +29,10 @@ Global
 		{8F2245C3-CE28-49CD-A040-98BE5962C7F4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8F2245C3-CE28-49CD-A040-98BE5962C7F4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8F2245C3-CE28-49CD-A040-98BE5962C7F4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{749CFDC3-275A-405F-A39A-EC54D2A88809}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{749CFDC3-275A-405F-A39A-EC54D2A88809}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{749CFDC3-275A-405F-A39A-EC54D2A88809}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{749CFDC3-275A-405F-A39A-EC54D2A88809}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -32,6 +40,7 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{53E2A99F-6872-49AE-B3B9-9AD6EF1E5651} = {820738EA-BFE7-4DEF-ABF1-600BC4BB91D4}
 		{8F2245C3-CE28-49CD-A040-98BE5962C7F4} = {DB02D074-9EED-49CA-A874-2C8FA4629CF8}
+		{749CFDC3-275A-405F-A39A-EC54D2A88809} = {3D61F254-6C39-41E6-9E28-89B089537AB4}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {242F3398-9B68-48C0-83D4-5C09FB47681D}
