@@ -27,7 +27,7 @@ namespace JWT.Extensions.Mvc
                 throw new NoSecretSpecifiedException();
 
             //combine redirect url
-            var redirectUrl = $"{jwtOptions.RedirectUrl}?redirectUrl={context.HttpContext.Request.Path}";
+            var redirectUrl = $"{jwtOptions.RedirectUrl}?redirectUrl={context.HttpContext.Request.Path}{context.HttpContext.Request.QueryString}";
 
             var actionDescriptor = context.ActionDescriptor as ControllerActionDescriptor;
             var controllerTypeInfo = actionDescriptor.ControllerTypeInfo;
