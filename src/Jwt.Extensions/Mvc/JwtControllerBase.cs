@@ -26,6 +26,9 @@ namespace JWT.Extensions.Mvc
             if (string.IsNullOrEmpty(jwtOptions.SecretStr) && (jwtOptions.SecretBytes == null || jwtOptions.SecretBytes.Length == 0))
                 throw new NoSecretSpecifiedException();
 
+            //combine redirect url
+            var redirectUrl = $"{jwtOptions.RedirectUrl}?redirectUrl={context.HttpContext.Request.Path}";
+
             var actionDescriptor = context.ActionDescriptor as ControllerActionDescriptor;
             var controllerTypeInfo = actionDescriptor.ControllerTypeInfo;
             var methodInfo = actionDescriptor.MethodInfo;
@@ -58,7 +61,7 @@ namespace JWT.Extensions.Mvc
                     else
                     {
                         //token verify fail
-                        context.HttpContext.Response.Redirect(jwtOptions.RedirectUrl);
+                        context.HttpContext.Response.Redirect(redirectUrl);
                     }
                 }
             }
@@ -92,7 +95,7 @@ namespace JWT.Extensions.Mvc
                         else
                         {
                             //token verify fail
-                            context.HttpContext.Response.Redirect(jwtOptions.RedirectUrl);
+                            context.HttpContext.Response.Redirect(redirectUrl);
                         }
                     }
                 }
@@ -118,7 +121,7 @@ namespace JWT.Extensions.Mvc
                     else
                     {
                         //token verify fail
-                        context.HttpContext.Response.Redirect(jwtOptions.RedirectUrl);
+                        context.HttpContext.Response.Redirect(redirectUrl);
                     }
                 }
             }
