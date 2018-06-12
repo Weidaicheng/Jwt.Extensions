@@ -6,9 +6,9 @@ namespace Jwt.Extensions.Tests.TestWebApp
 {
     public class Program
     {
-        public static void StartWebApp()
+        public async static Task StartWebApp()
         {
-            Task.Run(() =>
+            await Task.Run(() =>
             {
                 WebHost.CreateDefaultBuilder()
                 .UseStartup<Startup>()
