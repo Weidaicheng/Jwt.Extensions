@@ -24,7 +24,7 @@ namespace Jwt.Extensions.Tests.TestWebApp
             services.AddJwt(options =>
             {
                 options.SecretStr = "secret";
-                options.RedirectUrl = "/Test/Error";
+                options.RedirectAction = "Error";
                 options.Bearer = TokenBearer.QueryString;
             });
         }
