@@ -4,13 +4,13 @@
     <TargetFramework>netcoreapp2.0</TargetFramework>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
     <Authors>Weidaicheng</Authors>
-    <Version>1.1.1</Version>
+    <Version>1.2</Version>
     <Description>Extensions for jwt(https://github.com/jwt-dotnet/jwt) and asp.net core 2.0</Description>
     <Copyright>Copyright (c) 2018 Weidaicheng</Copyright>
     <PackageLicenseUrl>https://github.com/Weidaicheng/Jwt.Extensions/blob/master/LICENSE.md</PackageLicenseUrl>
     <PackageProjectUrl>https://github.com/Weidaicheng/Jwt.Extensions</PackageProjectUrl>
     <RepositoryUrl>https://github.com/Weidaicheng/Jwt.Extensions</RepositoryUrl>
-    <PackageReleaseNotes>Fixed: there is no query string in redirect url</PackageReleaseNotes>
+    <PackageReleaseNotes>Fixed: redirect doesn't work</PackageReleaseNotes>
   </PropertyGroup>
 
   <ItemGroup>
