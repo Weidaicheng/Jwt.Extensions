@@ -62,9 +62,15 @@ namespace JWT.Extensions.Mvc
                     {
                         //token verify fail
                         if (string.IsNullOrEmpty(jwtOptions.RedirectController))
-                            context.Result = RedirectToAction(jwtOptions.RedirectAction);
+                            context.Result = RedirectToAction(jwtOptions.RedirectAction, new
+                            {
+                                redirectUrl
+                            });
                         else
-                            context.Result = RedirectToAction(jwtOptions.RedirectAction, jwtOptions.RedirectController);
+                            context.Result = RedirectToAction(jwtOptions.RedirectAction, jwtOptions.RedirectController, new
+                            {
+                                redirectUrl
+                            });
                     }
                 }
             }
@@ -99,9 +105,15 @@ namespace JWT.Extensions.Mvc
                         {
                             //token verify fail
                             if (string.IsNullOrEmpty(jwtOptions.RedirectController))
-                                context.Result = RedirectToAction(jwtOptions.RedirectAction);
+                                context.Result = RedirectToAction(jwtOptions.RedirectAction, new
+                                {
+                                    redirectUrl
+                                });
                             else
-                                context.Result = RedirectToAction(jwtOptions.RedirectAction, jwtOptions.RedirectController);
+                                context.Result = RedirectToAction(jwtOptions.RedirectAction, jwtOptions.RedirectController, new
+                                {
+                                    redirectUrl
+                                });
                         }
                     }
                 }
@@ -128,9 +140,15 @@ namespace JWT.Extensions.Mvc
                     {
                         //token verify fail
                         if (string.IsNullOrEmpty(jwtOptions.RedirectController))
-                            context.Result = RedirectToAction(jwtOptions.RedirectAction);
+                            context.Result = RedirectToAction(jwtOptions.RedirectAction, new
+                            {
+                                redirectUrl
+                            });
                         else
-                            context.Result = RedirectToAction(jwtOptions.RedirectAction, jwtOptions.RedirectController);
+                            context.Result = RedirectToAction(jwtOptions.RedirectAction, jwtOptions.RedirectController, new
+                            {
+                                redirectUrl
+                            });
                     }
                 }
             }
