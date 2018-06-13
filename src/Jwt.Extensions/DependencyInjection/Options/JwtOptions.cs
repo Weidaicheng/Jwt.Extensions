@@ -28,9 +28,15 @@
         public string TokenBearerKey { get; set; } = "Token";
 
         /// <summary>
-        /// redirect url for token verify failed
+        /// redirect action for token verify failed
         /// </summary>
-        public string RedirectUrl { get; set; }
+        public string RedirectAction { get; set; }
+
+        /// <summary>
+        /// redirect action for token verify failed,
+        /// if this is not specified, would use the same controller with current request context
+        /// </summary>
+        public string RedirectController { get; set; }
     }
 
     /// <summary>

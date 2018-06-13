@@ -27,7 +27,7 @@ namespace JWT.Extensions.Mvc
                 throw new NoSecretSpecifiedException();
 
             //combine redirect url
-            var redirectUrl = $"{jwtOptions.RedirectUrl}?redirectUrl={context.HttpContext.Request.Path}{context.HttpContext.Request.QueryString}";
+            var redirectUrl = $"{context.HttpContext.Request.Path}{context.HttpContext.Request.QueryString}";
 
             var actionDescriptor = context.ActionDescriptor as ControllerActionDescriptor;
             var controllerTypeInfo = actionDescriptor.ControllerTypeInfo;
@@ -61,7 +61,10 @@ namespace JWT.Extensions.Mvc
                     else
                     {
                         //token verify fail
-                        context.HttpContext.Response.Redirect(redirectUrl);
+                        if (string.IsNullOrEmpty(jwtOptions.RedirectController))
+                            context.Result = RedirectToAction(jwtOptions.RedirectAction);
+                        else
+                            context.Result = RedirectToAction(jwtOptions.RedirectAction, jwtOptions.RedirectController);
                     }
                 }
             }
@@ -95,7 +98,10 @@ namespace JWT.Extensions.Mvc
                         else
                         {
                             //token verify fail
-                            context.HttpContext.Response.Redirect(redirectUrl);
+                            if (string.IsNullOrEmpty(jwtOptions.RedirectController))
+                                context.Result = RedirectToAction(jwtOptions.RedirectAction);
+                            else
+                                context.Result = RedirectToAction(jwtOptions.RedirectAction, jwtOptions.RedirectController);
                         }
                     }
                 }
@@ -121,7 +127,10 @@ namespace JWT.Extensions.Mvc
                     else
                     {
                         //token verify fail
-                        context.HttpContext.Response.Redirect(redirectUrl);
+                        if (string.IsNullOrEmpty(jwtOptions.RedirectController))
+                            context.Result = RedirectToAction(jwtOptions.RedirectAction);
+                        else
+                            context.Result = RedirectToAction(jwtOptions.RedirectAction, jwtOptions.RedirectController);
                     }
                 }
             }
