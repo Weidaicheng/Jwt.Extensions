@@ -6,7 +6,7 @@ namespace JWT.Extensions.Attributes
     /// Jwt check attribute
     /// it can be used on controller and method
     /// </summary>
-    [AttributeUsage(AttributeTargets.Class | AttributeTargets.Method)]
+    [AttributeUsage((AttributeTargets.Class | AttributeTargets.Method), AllowMultiple = false)]
     public class JwtCheckAttribute : Attribute
     {
         /// <summary>
