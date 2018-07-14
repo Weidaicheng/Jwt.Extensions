@@ -2,6 +2,19 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp2.0</TargetFramework>
+    <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+    <Authors>Weidaicheng</Authors>
+    <Version>1.2.2</Version>
+    <Description>Extensions for jwt(https://github.com/jwt-dotnet/jwt) and asp.net core 2.0</Description>
+    <Copyright>Copyright (c) 2018 Weidaicheng</Copyright>
+    <PackageLicenseUrl>https://github.com/Weidaicheng/Jwt.Extensions/blob/master/LICENSE.md</PackageLicenseUrl>
+    <PackageProjectUrl>https://github.com/Weidaicheng/Jwt.Extensions</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/Weidaicheng/Jwt.Extensions</RepositoryUrl>
+    <PackageReleaseNotes>Add: add documents</PackageReleaseNotes>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DocumentationFile>bin\Debug\netcoreapp2.0\Jwt.Extensions.xml</DocumentationFile>
   </PropertyGroup>
 
   <ItemGroup>
